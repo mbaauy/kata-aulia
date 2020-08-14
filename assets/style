@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Niconne&family=Patrick+Hand+SC&family=Quicksand&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    overflow: auto;
+}
+
+header {
+    display: inline;
+}
+
+nav, footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e0e0d1;
+    overflow: auto;
+    color: black;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    margin-top: 12px;
+    font-family: "Niconne", cursive;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+nav li, footer li {
+    list-style-type: none;
+    float: left;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    text-align: center;
+    width: 70px;
+    line-height: 56px;
+}
+
+nav a:hover {
+    background-color: #b8b894;
+    color: white;
+    transition: 0.5s;
+}
+
+.burger-menu {
+    font-size: 25px;
+    padding: 10px 0;
+    display: none;
+}
+
+.burger-menu input {
+    width: 35px;
+    height: 22px;
+    background-color: #99ccff);
+    opacity: 0;
+    position: relative;
+    top: 5px;
+    left: 30px;
+}
+
+.jumbotron {
+    padding: 60px;
+    text-align: center;
+    background: url("../image/book.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+    color: white;
+}
+
+main {
+    background-color: white;
+    display: flex;
+}
+
+#content {
+    width: 70%;
+    background-color: white;
+}
+
+aside {
+    width: 30%;
+    padding: 50px 20px 20px;
+    background-color: #b8b894;
+}
+
+/* nav ul {
+    display: flex;
+    z-index: -1;
+} */
+
+.card {
+    background-color: #f5f5f0;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}   
+
+section {
+    padding: 40px 20px;
+}
+
+#content section:nth-child(even) {
+    background-color: #f5f5f0;
+}
+
+#content section:nth-child(even) .card {
+    background-color: white;
+}
+
+section .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title h3 {
+    font-family: "Patrick Hand SC", cursive;
+    font-size: 38px;
+    color: #5c5c3d;
+}
+
+article h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+article img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 15px auto 25px;
+}
+
+figure img {
+    width: 70%;
+}
+
+aside section {
+    border-top: 1px solid #669999;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+article p {
+    font-family: "Quicksand", sans-serif;
+    text-align: justify;
+    text-indent: 25px;
+}
+
+.no-indent {
+    text-indent: 0;
+    text-align: left;
+}
+
+blockquote {
+    text-align: center;
+}
+
+blockquote span {
+    font-weight: bold;
+    font-style: italic;
+}
+
+section table:nth-child(2) td {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+section table:nth-child(2) {
+    display: none;
+}
+
+footer {
+    padding: 18px 0;
+}
+
+footer li {
+    margin-right: 20px;
+}
+
+footer ul li i {
+    margin-right: 5px;
+}
+
+
+
+/* Responsive start*/
+
+@media (max-width: 951px) {
+    section table:nth-child(1) {
+        display: none;
+    }
+
+    section table:nth-child(2) {
+        display: table;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        font-size: 1.5em;
+    }
+    
+    main {
+        flex-direction: column;
+    }
+
+    #content {
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    section table:nth-child(1) {
+        display: table;
+        margin: 0 auto;
+    }
+
+    section table :nth-child(1) td {
+        padding-left: 10px;
+    }
+
+    section table:nth-child(2) {
+        display: none;
+    }
+
+    figure img {
+        width: 35%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    footer div {
+        margin: 3px 0;
+    }
+
+    footer div:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        font-size: 1.2em;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        background-color: rgb(205, 205, 177, 0.9);
+        right: 0;
+        width: 50%;
+        height: 100vh;
+        z-index: -2;
+        align-items: center;
+        align-content: center;
+        padding-top: 55px;
+        transition: all 0.9s;
+    }
+
+    nav ul li a {
+        color: black;
+    }
+
+    nav ul.slide {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    nav, footer {
+        width: 100vw;
+    }
+
+    figure img {
+        width: 50%;
+    }
+}
+
+/* Responsive end */
