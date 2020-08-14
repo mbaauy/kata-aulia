@@ -75,7 +75,7 @@ nav a:hover {
 .jumbotron {
     padding: 60px;
     text-align: center;
-    background: url("../image/book.jpg");
+    background: url("./book.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
